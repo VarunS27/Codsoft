@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000 !important;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: black;
+}
+
+.logo {
+    font-size: 1.5em;
+    color: #fff;
+}
+
+.user {
+    display: none; 
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 10PX;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Hamburger menu */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: #fff;
+    background-color: black;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: #000;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    #menu-toggle:checked + nav .nav-links {
+        display: flex;
+    }
+
+    .user {
+        display: block;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+@media (min-width: 769px) {
+    header {
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        display: flex;
+    }
+
+    .user {
+        display: block;
+    }
+}
+
+
+footer {
+    background-color: black;
+    color: white;
+    width: 100%;
+    text-align: center;
+    position: relative; /* So it stays at the bottom of the content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5em 0;
+    bottom: 0;
+    left: 0;
+}
+
